@@ -1,3 +1,11 @@
-<div>
-
+<div ng-controller="PersonalDataCtrl as person">
+    <div ng-repeat="i in data">
+        <h3>{{i.subtitle}}</h3>
+        <ul>
+            <li ng-repeat="(key, value) in i.info">
+                <span>{{key}}</span>
+                <span>{{value}}</span>
+            </li>
+        </ul>
+    </div>
 </div>
