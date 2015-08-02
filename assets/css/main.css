@@ -95,10 +95,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.titleLogo {
+    width: 100px;
+}
 
+.mainNav {
 
+}
 
+.navUl{
+    list-style: none;
+}
 
+.navUl{
+}
 
 
 

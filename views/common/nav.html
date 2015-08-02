@@ -1,9 +1,9 @@
-<nav class="navbar-default navbar-static-side" role="navigation">
-    <div class="sidebar-collapse">
-        <ul side-navigation class="nav metismenu">
+<nav class="mainNav" role="navigation">
+    <div>
+        <ul side-navigation class="navUl">
             <li ui-sref-active="active">
                 <a href="#" ng-click="isCatalogOpen = !isCatalogOpen" ng-init="isCatalogOpen = false">Catalog</a>
-                <ul ng-show="isCatalogOpen">
+                <ul ng-show="isCatalogOpen" class="navUl">
                     <li ui-sref-active="active">
                         <a ui-sref="index.personalData">personalData</a>
                     </li>
