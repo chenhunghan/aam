@@ -39,9 +39,53 @@ function config($stateProvider, $urlRouterProvider) {
         })
 }
 
-function MainCtrl($scope, $state) {
-    console.log('hi')
+function MainCtrl($scope) {
+
 };
+
+function PersonalDataCtrl($scope, $http) {
+    $http.get('assets/data/personalData.json').
+        success(function(data, status, headers, config) {
+            $scope.data = data;
+            console.log($scope.data)
+        }).
+        error(function(data, status, headers, config) {
+            console.error(data)
+        });
+
+};
+
+function PropertyCtrl($scope, $http) {
+    $http.get('assets/data/property.json').
+        success(function(data, status, headers, config) {
+            $scope.data = data;
+        }).
+        error(function(data, status, headers, config) {
+            console.error(data)
+        });
+
+};
+
+function CompanyCtrl($scope, $http) {
+    $http.get('assets/data/company.json').
+        success(function(data, status, headers, config) {
+            $scope.data = data;
+        }).
+        error(function(data, status, headers, config) {
+            console.error(data)
+        });
+
+};
+
+function VehicleCtrl($scope, $http){
+    $http.get('assets/data/vehicle.json').
+        success(function(data, status, headers, config) {
+            $scope.data = data;
+        }).
+        error(function(data, status, headers, config) {
+            console.error(data)
+        });
+}
 
 
 (function () {
@@ -49,6 +93,10 @@ function MainCtrl($scope, $state) {
         'ui.router',                    // Routing
     ])
         .controller('MainCtrl', MainCtrl)
+        .controller('PersonalDataCtrl', PersonalDataCtrl)
+        .controller('PropertyCtrl', PropertyCtrl)
+        .controller('CompanyCtrl', CompanyCtrl)
+        .controller('VehicleCtrl', VehicleCtrl)
         .config(config)
         .run(function($rootScope, $state) {
             $rootScope.$state = $state
