@@ -95,6 +95,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*font-family: 'Oswald', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+
 .titleLogo {
     width: 100px;
 }
@@ -105,9 +108,6 @@ textarea {
 
 .navUl{
     list-style: none;
-}
-
-.navUl{
 }
 
 
