@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu">
+            <li ui-sref-active="active">
+                <a href="#" ng-click="isCatalogOpen = !isCatalogOpen" ng-init="isCatalogOpen = false">Catalog</a>
+                <ul ng-show="isCatalogOpen">
+                    <li ui-sref-active="active">
+                        <a ui-sref="catalog.personalData"></a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="catalog.property"></a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="catalog.company"></a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="catalog.vehicle"></a>
+                    </li>
+                </ul>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.myservices"></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.discover"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
