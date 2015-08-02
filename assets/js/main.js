@@ -3,7 +3,7 @@ console.log('mian.js loaded')
 function config($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider
-        .when('', '/index/home')
+        .when('', '/index/personalData')
         .otherwise("/index/404");
 
     $stateProvider
@@ -18,10 +18,24 @@ function config($stateProvider, $urlRouterProvider) {
             templateUrl: "views/404.html",
             data: { pageTitle: 'Not Found' }
         })
-        .state('index.home', {
-            url: "/home",
-            templateUrl: "views/home.html",
-            data: { pageTitle: 'Home' }
+        .state('index.personalData', {
+            url: "/personalData",
+            templateUrl: "views/personalData.html"
+        })
+        .state('index.property', {
+            url: "/property",
+            templateUrl: "views/property.html"
+        })
+        .state('index.company', {
+            url: "/company",
+            templateUrl: "views/company.html"
+        })
+        .state('index.vehicle', {
+            url: "/vehicle",
+            templateUrl: "views/vehicle.html"
+        })
+        .state('index.textAdjustment', {
+            url: "/vehicle"
         })
 }
 
