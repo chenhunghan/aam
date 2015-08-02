@@ -1,0 +1,42 @@
+[
+  {
+    "subtitle": "Perustiedot",
+    "info" : {
+      "Auton omistaja": "Kumpulainen, Matti Johannes",
+      "Rekisteritunnus": "ABC-111",
+      "Valmistenumero": "ZAR93200000001234567",
+      "Ensirekisteröinti Suomeen": "25/11/05",
+      "Tyyppihyväksyntänumero": "e3*98/14*0034*10",
+      "Variantti": "AXA100",
+      "Versio": "52B",
+      "Käyttö": "Yksityinen",
+      "Vakuutus": "Vakuutusyhtiö Oy 11.12.2012"
+    }
+  },
+  {
+    "subtitle": "Panttikirjat",
+    "info": {
+      "Iskutilavuus (cm3)": "1970",
+      "Käyttövoima": "Bensiini",
+      "Suurin nettoteho (kW)": "122",
+      "Melu ohiajossa (dB)": "72",
+      "Melu paikoillaan (dB)": "80"
+    }
+  },
+  {
+    "subtitle": "Katsastustiedot",
+    "info": {
+      "Määräaikaiskatsastettu": "16/04/14",
+      "Seuraava katsastusväli": "25.7.2014-25.11.2015"
+    }
+  },
+  {
+    "subtitle": "Ajoneuvon kulutus- ja päästötiedot",
+    "info": {
+      "Kulutus maantieajossa (l/100 km)": "6,6",
+      "Kulutus kaupunkiajosa (l/100 km)": "12,2",
+      "Yhdistetty kulutus (l/100 km)": "8,6",
+      "CO2 Yhdistetty (g/km)": "205"
+    }
+  }
+]

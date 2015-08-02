@@ -1,0 +1,25 @@
+[
+  {
+    "subtitle": "Kiinteistön perustiedot",
+    "info" : {
+      "Kiinteistötunnus": "123-456-78-90",
+      "Rekisteriyksikkölaji": "Tila",
+      "Kunta": "Vihti",
+      "Pinta-ala": "1030 m2",
+      "Nimi": "K350t5",
+      "Omistusmuoto": "Omistaja",
+      "Omistusosuus": "1/2"
+    }
+  },
+  {
+    "subtitle": "Panttikirjat",
+    "info": {
+      "Päiväys": "01/07/10",
+      "Tunnus": "111/pp.kk.vvvv/12345",
+      "Kohde (kiinteistötunnus)": "123-456-78-90",
+      "Kiinnitys": "50 000,00 €",
+      "Muoto": "Kirjallinen",
+      "Saajat/Haltijat": "Pankki Oyj"
+    }
+  }
+]

@@ -1,0 +1,131 @@
+[
+  {
+    "subtitle": "HENKILÖ",
+    "info" : {
+      "Sukunimi":	"Kumpulainen",
+      "Etunimet":	"Pauliina Johanna",
+      "Henkilötunnus": "010180-836B",
+      "Sähköinen asiointitunnus": "99754524V",
+      "Kansalaisuus":	"Suomi",
+      "Siviilisääty":	"Avioliitossa",
+      "Äidinkieli":	"suomi",
+      "Ammatti":	"Vaatesuunnittelija",
+      "Lisätietoja Kutsumanimi": "Paula"
+    }
+  },
+  {
+    "subtitle": "SYNTYMÄPAIKKA",
+    "info": {
+      "Syntymäkotikunta":	"Salo",
+      "Syntymävaltio": "Suomi",
+      "Ulkomainen syntymäpaikka": "-"
+    }
+  },
+  {
+    "subtitle": "OSOITETIEDOT",
+    "info": {
+      "Vakinaisen asumisen tiedot": "",
+      "Kotikunta": "Vihti",
+      "Kuntaan muuttopäivä": 	"28/03/11",
+      "Vakinainen asuinos.": 	"Kotikatu 18",
+      "Postitoimipaikka": 	"03100 Vihti",
+      "Muuttopäivä": 	"28/03/11",
+      "Vuodenvaihteen 2013/2014 kotikunta": "Vihti"
+    }
+  },
+  {
+    "subtitle": "Sähköpostiosoitetiedot",
+    "info": {
+      "Sähköposti": "pauliina.kumpulainen@sahkoposti.fi",
+      "Rekisteröintipäivä": "01/04/08"
+    }
+  },
+  {
+    "subtitle": "REKISTERIVIRANOMAINEN JA USKONTOKUNTA",
+    "info": {
+      "Rekisteriviranomainen": "Länsi-Uudenmaan maistraatti"
+    }
+
+  },
+  {
+    "subtitle": "VANHEMMAT",
+    "info": {
+      "Nimi": "Ketonen Juhani Antero",
+      "Syntymäaika": "15/10/55"
+    }
+  },
+  {
+    "subtitle": "VANHEMMAT",
+    "info": {
+      "Nimi": "Ketonen Juhani Antero",
+      "Syntymäaika": "15/10/55"
+    }
+  },
+  {
+    "subtitle": "Nimi",
+    "info": {
+      "Syntymäaika":	"06/04/56"
+    }
+  },
+  {
+    "subtitle": "LAPSET",
+    "info": {
+      "Nimi": "Kumpulainen Onni Matias",
+      "Syntymäaika": "01/05/13"
+    }
+  },
+  {
+    "subtitle": "HUOLLETTAVAT",
+    "info": {
+      "Nimi": "Kumpulainen Onni Matias",
+      "Henkilötunnus": "010513A451K"
+    }
+  },
+  {
+    "subtitle": "AVIOLIITTO",
+    "info": {
+      "Järjestysnumero": "1",
+      "Vihkimispäivä": "16/07/11",
+      "Vihkimistapa": "Siviilivihkiminen",
+      "Aviopuoliso": "",
+      "Nimi": "Kumpulainen Matti Johannes",
+      "Syntymäaika": "12/09/78",
+      "Kansalaisuus": "Suomi"
+    }
+  },
+  {
+    "subtitle": "ÄÄNESTYSPAIKKA",
+    "info": {
+      " ": "Vihdin lukio",
+      " ": "Hiidenvedentie 3, Nummela"
+    }
+  },
+  {
+    "subtitle": "TIETOJENLUOVUTUSKIELLOT",
+    "info": {
+      " ": "VTJ:ssä ei merkintää"
+    }
+  },
+  {
+    "subtitle": "KIINTEISTÖT JA MÄÄRÄALAT, JOISSA HENKILÖ ON OMISTAJANA",
+    "info": {
+      "Tunnus": "123-456-78-90",
+      "Nimi": "",
+      "Osoite": "Kotikatu 18, 03100 Vihti"
+    }
+  },
+  {
+    "subtitle": "RAKENNUKSET, JOISSA HENKILÖ ON OMISTAJANA TAI EDUSTAJANA",
+    "info": {
+      "Tunnus": "123-456-78-90-H-001",
+      "Osoite": "Kotikatu 18, 03100 Vihti"
+    }
+  },
+  {
+    "subtitle": "EDELLISET KOTIKUNNAT",
+    "info": {
+      "16.8.1999-27.3.2011": "Vaasa",
+      "1.1.1980-15.8.1999": "Salo"
+    }
+  }
+]
