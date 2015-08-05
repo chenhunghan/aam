@@ -6,53 +6,49 @@
         </div>
 
         <nav class="mainNav" role="navigation">
-
-                <ul class="navUl">
-                    <li ui-sref-active="active">
-                        <a href="#" ng-click="isCatalogOpen = !isCatalogOpen" ng-init="isCatalogOpen = false">
-                            <img src="assets/img/catalog.png" class='navImg' />
-                            <br/>
-                            <span class="navLink">Catalog</span>
-                        </a>
-                        <ul ng-show="isCatalogOpen" class="navUl">
-                            <li ui-sref-active="active">
-                                <a ui-sref="index.personalData">
-                                    <img src="assets/img/person.png" class='navImg' />
-                                </a>
-                            </li>
-                            <li ui-sref-active="active">
-                                <a ui-sref="index.property">
-                                    <img src="assets/img/property.png" class='navImg' />
-                                </a>
-                            </li>
-                            <li ui-sref-active="active">
-                                <a ui-sref="index.company">
-                                    <img src="assets/img/company.png" class='navImg' />
-                                </a>
-                            </li>
-                            <li ui-sref-active="active">
-                                <a ui-sref="index.vehicle">
-                                    <img src="assets/img/vehicledata.png" class='navImg' />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="index.textAdjustment">
-                            <img src="assets/img/catalog.png" class='navImg' />
-                            <br/>
-                            <span class="navLink">Text Adjustment</span>
-                        </a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a href="assets/pdf/download.pdf">
-                            <img src="assets/img/download.png" class='navImg' />
-                            <br/>
-                            <span class="navLink">Download</span>
-                        </a>
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div ng-click="isCatalogOpen = !isCatalogOpen" ng-init="isCatalogOpen = false">
+                        <img src="assets/img/catalog.png" class='navImg' />
+                        <br/>
+                        <span class="navLink">Catalog</span>
+                    </div>
+                </div>
+                <div class="col-lg-2" ng-show="isCatalogOpen" >
+                    <a ui-sref="index.personalData">
+                        <img src="assets/img/person.png" class='navImg' />
+                    </a>
+                </div>
+                <div class="col-lg-2" ng-show="isCatalogOpen" >
+                    <a ui-sref="index.property">
+                        <img src="assets/img/property.png" class='navImg' />
+                    </a>
+                </div>
+                <div class="col-lg-2" ng-show="isCatalogOpen" >
+                    <a ui-sref="index.company">
+                        <img src="assets/img/company.png" class='navImg' />
+                    </a>
+                </div>
+                <div class="col-lg-2" ng-show="isCatalogOpen" >
+                    <a ui-sref="index.vehicle">
+                        <img src="assets/img/vehicledata.png" class='navImg' />
+                    </a>
+                </div>
+                <div class="col-lg-2" ng-hide="isCatalogOpen" >
+                    <a ui-sref="index.textAdjustment">
+                        <img src="assets/img/text.png" class='navImg textAdj' />
+                        <br/>
+                        <span class="navLink">Text<span class="navLinkPlus"> +/-</span></span>
+                    </a>
+                </div>
+                <div class="col-lg-2" ng-hide="isCatalogOpen" >
+                    <a href="assets/pdf/download.pdf">
+                        <img src="assets/img/download.png" class='navImg download' />
+                        <br/>
+                        <span class="navLink">Download</span>
+                    </a>
+                </div>
+            </div>
         </nav>
     </div>
-
 </div>
