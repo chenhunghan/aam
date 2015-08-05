@@ -46,8 +46,10 @@ function MainCtrl($scope) {
 function PersonalDataCtrl($scope, $http) {
     $http.get('assets/data/personalData.json').
         success(function(data, status, headers, config) {
-            $scope.data = data;
-            console.log($scope.data)
+            $scope.data = data
+            l = data.lenght
+            $scope.dataRowOne = data.slice(0,4);
+            $scope.dataRowTwo = data.slice(5,l);
         }).
         error(function(data, status, headers, config) {
             console.error(data)
