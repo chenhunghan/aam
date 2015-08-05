@@ -144,7 +144,7 @@ body {
     font-size: 12px;
     color: black;
     display: inline-block;
-    margin:7px 0 0 18px;
+    margin:8px 0 0 18px;
 }
 .navLinkPlus {
     font-size: 15px;
@@ -215,8 +215,127 @@ address h6{
    Images
    ========================================================================== */
 
+.personal001, .personal002, .personal003, .personal004, .personal005,
+.property1, .property2, .property3, .property4, .property5, .property6, .property7,
+.cash001, .cash002, .cash003,
+.vehicle, .vehicleroad1, .vehicleroad2, .vehicleroad3
+
+{
+    position: absolute;
+    z-index: -100000;
+}
+
+.personal001 {
+    width: 40vw;
+    top: -5vw;
+    right: 3vw;
+}
+
+.personal003 {
+    width: 10vw;
+    top: 140vh;
+    left: 14vw;
+}
+
+.personal004 {
+    width: 12vw;
+    top: 210vh;
+    right: 16vw;
+}
+
+.personal005 {
+    width: 10vw;
+    top: 90vh;
+    right: 16vw;
+}
+
+.property1, .property2, .property3, .property4, .property5, .property6, .property7 {
+    width: 18vw;
+    top: 10vh;
+    right: 10vw;
+}
+
+.property2 {
+    top: 55vh;
+    right: 6vw;
+}
+
+.property3 {
+    width: 15vw;
+    top: 49.7vh;
+    right: 8vw;
+}
+
+.property4 {
+    width: 18vw;
+    top: 39.2vh;
+    right: 6.5vw;
+}
+
+.property5 {
+    width: 12vw;
+    top: 35.5vh;
+    right: 6vw;
+}
+
+.property6 {
+    width: 10.5vw;
+    top: 28.3vh;
+    right: 6.8vw;
+}
+
+.property7 {
+    width: 10.5vw;
+    top: 18.5vh;
+    right: 7.5vw;
+}
+
+.cash001 {
+    width: 32vw;
+    top: 10vh;
+    right: 6vw;
+}
+
+.cash002 {
+    width: 24vw;
+    top: 45vh;
+    right: 7vw;
+}
+
+.cash003 {
+    width: 24vw;
+    top: 90vh;
+    left: 7vw;
+}
+
+.vehicle {
+    width: 3vw;
+    top: 14vh;
+    right: 19.6vw;
+}
+
+.vehicleroad1, .vehicleroad2, .vehicleroad3 {
+    width: 5vw;
+
+}
+
+.vehicleroad1 {
+    width: 13vw;
+    top: 5vh;
+    right: 10vw;
+}
+
+.vehicleroad2 {
+    width: 21vw;
+    top: 65vh;
+    right: 10vw;
+}
 
 
+.vehicleroad3 {
+    top: 120vh;
+    left: 30vw;
+}
 
 /* ==========================================================================
    Helper classes
