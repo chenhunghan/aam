@@ -1,27 +1,58 @@
-<nav class="mainNav" role="navigation">
-        <ul side-navigation class="navUl">
-            <li ui-sref-active="active">
-                <a href="#" ng-click="isCatalogOpen = !isCatalogOpen" ng-init="isCatalogOpen = false">Catalog</a>
-                <ul ng-show="isCatalogOpen" class="navUl">
+<div class="row">
+    <div class="col-xs-12 col-sm-9 col-lg-8 col-sm-offset-1 col-lg-offset-0">
+        <div class="titleBlock">
+            <img src="assets/img/personal002.png" class='titleLogo' />
+            <img src="assets/img/title.png" class="title"/>
+        </div>
+
+        <nav class="mainNav" role="navigation">
+
+                <ul class="navUl">
                     <li ui-sref-active="active">
-                        <a ui-sref="index.personalData">personalData</a>
+                        <a href="#" ng-click="isCatalogOpen = !isCatalogOpen" ng-init="isCatalogOpen = false">
+                            <img src="assets/img/catalog.png" class='navImg' />
+                            <br/>
+                            <span class="navLink">Catalog</span>
+                        </a>
+                        <ul ng-show="isCatalogOpen" class="navUl">
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.personalData">
+                                    <img src="assets/img/person.png" class='navImg' />
+                                </a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.property">
+                                    <img src="assets/img/property.png" class='navImg' />
+                                </a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.company">
+                                    <img src="assets/img/company.png" class='navImg' />
+                                </a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.vehicle">
+                                    <img src="assets/img/vehicledata.png" class='navImg' />
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="index.property">property</a>
+                        <a ui-sref="index.textAdjustment">
+                            <img src="assets/img/catalog.png" class='navImg' />
+                            <br/>
+                            <span class="navLink">Text Adjustment</span>
+                        </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="index.company">company</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="index.vehicle">vehicle</a>
+                        <a href="assets/pdf/download.pdf">
+                            <img src="assets/img/download.png" class='navImg' />
+                            <br/>
+                            <span class="navLink">Download</span>
+                        </a>
                     </li>
                 </ul>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="index.textAdjustment">Text Adjustment</a>
-            </li>
-            <li ui-sref-active="active">
-                <a href="assets/pdf/download.pdf">Download</a>
-            </li>
-        </ul>
-</nav>
+        </nav>
+    </div>
+
+</div>

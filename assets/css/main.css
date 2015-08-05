@@ -98,16 +98,39 @@ textarea {
 /*font-family: 'Oswald', sans-serif;*/
 /*font-family: 'Roboto', sans-serif;*/
 
-.titleLogo {
-    width: 100px;
+.titleBlock {
+
 }
 
+.titleLogo {
+    display: inline;
+    width: 120px;
+}
+
+.title {
+    display: inline;
+    width: 450px;
+    padding-left: 20px;
+}
 .mainNav {
 
 }
 
 .navUl{
     list-style: none;
+}
+.navUl li {
+    display: inline-block;
+}
+.navImg {
+    width: 90px;
+}
+
+.navLink {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: black;
 }
 
 html,
