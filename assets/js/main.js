@@ -40,6 +40,30 @@ function config($stateProvider, $urlRouterProvider) {
 }
 
 function MainCtrl($scope) {
+    var isCatalogOpen = false
+    $scope.toogleSlide = function () {
+        o = 145
+        t = 92
+        if (isCatalogOpen === false) {
+            isCatalogOpen = !isCatalogOpen
+            console.log('animate!')
+            TweenMax.to(".navText", 0.5, {opacity: '0'});
+            TweenMax.to(".navDownload", 0.5, {opacity: '0'});
+
+            TweenMax.to(".navPersonal", 0.5, {opacity: '1',  left: (o+t) + 'px'});
+            TweenMax.to(".navProperty", 0.8, {opacity: '1', left: (o+t*2.2) + 'px'});
+            TweenMax.to(".navCompany", 1.2, {opacity: '1', left: (o+t*3.4) + 'px'});
+            TweenMax.to(".navVehicle", 1.5, {opacity: '1', left: (o+t*4.6) + 'px'});
+        } else {
+            isCatalogOpen = !isCatalogOpen
+            TweenMax.to(".navText", 2, {opacity: '1'});
+            TweenMax.to(".navDownload", 2, {opacity: '1'});
+            TweenMax.to(".navPersonal", 0.5, {opacity: '0',  left: o + 'px'});
+            TweenMax.to(".navProperty", 1.5, {opacity: '0', left: o + 'px'});
+            TweenMax.to(".navCompany", 2, {opacity: '0', left: o + 'px'});
+            TweenMax.to(".navVehicle", 2, {opacity: '0', left: o + 'px'});
+        }
+    }
 
 };
 
@@ -88,6 +112,16 @@ function VehicleCtrl($scope, $http){
             console.error(data)
         });
 }
+
+function minimalizaSidebar($timeout) {
+    return {
+        restrict: 'A',
+        template: '<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="" ng-click="minimalize()"><i class="fa fa-bars"></i></a>',
+        controller: function ($scope, $element) {
+
+        }
+    };
+};
 
 
 (function () {

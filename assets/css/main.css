@@ -338,6 +338,26 @@ address h6{
 }
 
 /* ==========================================================================
+   Animations
+   ========================================================================== */
+
+.navCatalog {
+    cursor: pointer;
+    z-index: 1;
+}
+.navPersonal, .navProperty, .navCompany, .navVehicle {
+    opacity: 0;
+    position: absolute;
+    top: 300px;
+    left: 145px;
+    z-index: 0;
+}
+
+.navText, .navDownload {
+    z-index: -1;
+}
+
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 
@@ -412,14 +432,14 @@ address h6{
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries for Responsive Design.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
 }
+
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
