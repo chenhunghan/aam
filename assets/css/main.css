@@ -100,8 +100,8 @@ body {
     overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 body {
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top: 20px;
+    padding-left: 40px;
 }
 
 /* ==========================================================================
@@ -109,22 +109,36 @@ body {
    ========================================================================== */
 
 .titleBlock {
-
+    display: inline;
+    padding: 0 0 0 32px;
 }
-
 .titleLogo {
     display: inline;
-    width: 110px;
+    width: 9vw;
+    max-width: 100px;
 }
 
 .title {
     display: inline;
-    width: 460px;
-    padding-left: 25px;
-    padding-bottom: 20px;
+    width: 30vw;
+    min-width: 220px;
 }
+
+.titleAnimated {
+    display: inline;
+    margin-left: -30vw;
+    opacity: 1;
+
+
+}
+
+.titleAnimatedSVG {
+    width: 30vw;
+    min-width: 220px;
+}
+
 .mainNav {
-    margin-top: -90px;
+    margin-top: -50px;
     margin-left: 145px;
     margin-bottom: 40px;
 }
@@ -194,7 +208,7 @@ address h6{
 }
 
 .itemRow {
-    padding-bottom: 10px;
+    padding: 7px 0 7px 0;
 }
 
 .itemKey{
@@ -212,17 +226,73 @@ address h6{
 }
 
 /* ==========================================================================
+   Logo Animation
+   ========================================================================== */
+
+.text--transparent {
+    fill: transparent;
+}
+
+.anim-shape {
+    -webkit-transform-origin: 0x 150px;
+    -ms-transform-origin: 0x 150px;
+    transform-origin: 0x 150px;
+    -webkit-transform: scale(0, 1) translate(0, 0);
+    -ms-transform: scale(0, 1) translate(0, 0);
+    transform: scale(0, 1) translate(0, 0);
+    -webkit-animation: moving-panel 0.3s infinite alternate;
+    animation: moving-panel 0.3s infinite alternate;
+}
+
+.colortext .anim-shape:nth-child(1) {
+    fill: #0E1826;
+}
+
+.colortext .anim-shape:nth-child(2) {
+    fill: #166973;
+}
+
+.colortext .anim-shape:nth-child(3) {
+    fill: #65BFA6;
+}
+
+.colortext .anim-shape:nth-child(4) {
+    fill: #F2CD5C;
+}
+
+.colortext .anim-shape:nth-child(5) {
+    fill: #F26444;
+}
+@-webkit-keyframes moving-panel {
+    100% {
+        -webkit-transform: scale(1, 1) translate(0px, 0);
+        transform: scale(1, 1) translate(0px, 0);
+    }
+}
+
+@keyframes moving-panel {
+    100% {
+        -webkit-transform: scale(1, 1) translate(0px, 0);
+        transform: scale(1, 1) translate(0px, 0);
+    }
+}
+
+/* ==========================================================================
    Images
    ========================================================================== */
 
 .personal001, .personal002, .personal003, .personal004, .personal005,
-.house, .property1, .property2, .property3, .property4, .property5, .property6, .property7,
+.house, .houseAll, .property1, .property2, .property3, .property4, .property5, .property6, .property7,
 .cash001, .cash002, .cash003,
 .vehicle, .vehicleroad1, .vehicleroad2, .vehicleroad3
 
 {
     position: absolute;
     z-index: -100000;
+}
+
+.houseAll{
+    opacity: 0;
 }
 
 .personal001 {
@@ -251,45 +321,53 @@ address h6{
 
 .house {
     top: 10vh;
-    right: 30vw;
+    right: 14vw;
+    width: 18vw;
 }
 
-.property1 {
+.property1, .houseAll {
     top: 0px;
     left: 0px;
-    width: 18vw;
+    width: 100%;
 }
 
 .property2 {
-    width: 18vw;
-    top: 0px;
-    left: 0px;
+    width: 100%;
+    top: 349px;
+    left: 45px;
 
 }
 
 .property3 {
-    width: 15vw;
+    width: 83%;
+    top: 307px;
+    left: 57px;
 
 }
 
 .property4 {
-    width: 18vw;
+    width: 100%;
+    top: 224px;
+    left: 35px;
 
 }
 
 .property5 {
-    width: 12vw;
-
+    width: 66.667%;
+    top: 196px;
+    left: 145px;
 }
 
 .property6 {
-    width: 10.5vw;
-
+    width: 58.333%;
+    top: 141px;
+    left: 152px;
 }
 
 .property7 {
-    width: 10.5vw;
-
+    width: 58.333%;
+    top: 66px;
+    left: 142px;
 }
 
 .cash001 {
@@ -374,6 +452,12 @@ address h6{
     -webkit-animation: scale 5s ease 1;
 
 }
+
+.property1, .property2, .property3, .property4, .property5, .property6, .property7 {
+    top: -500px;
+}
+
+
 
 
 @-webkit-keyframes scale {
@@ -472,10 +556,38 @@ address h6{
    ========================================================================== */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media only screen and (max-width: 768px) {
+    .titleLogo, .titleAnimated, .personal003,
+    .property1, .property2, .property3, .property4, .property5, .property6, .property7{
+        display: none;
+    }
+    .houseAll{
+        opacity: 1;
+    }
+    body {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .personal001 {
+        width: 30vw;
+    }
+
 }
 
+@media only screen and (max-width : 568px) {
 
+    body {
+        padding-top: 0;
+        margin: 0;
+    }
+    .personal001 {
+        width: 20vw;
+    }
+
+    .personal003 {
+
+    }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),

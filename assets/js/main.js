@@ -41,7 +41,16 @@ function config($stateProvider, $urlRouterProvider) {
         })
 }
 
+function loading() {
+    function hide() {
+        tl.to(".titleAnimated", 2, {opacity: 0})
+    }
+    tl = new TimelineMax({onComplete:hide})
+    tl.to(".titleAnimated", 0.25, {opacity: 1});
+}
+
 function MainCtrl($scope, $rootScope) {
+
     var isCatalogOpen = false
     $scope.toogleSlide = function () {
         o = 145
@@ -68,12 +77,13 @@ function MainCtrl($scope, $rootScope) {
     }
     $rootScope.$on('$viewContentLoading',
         function(event, viewConfig){
-            console.log('loading....')
+            loading()
         })
 
 };
 
 function PersonalDataCtrl($scope, $http, $timeout) {
+
     $http.get('assets/data/personalData.json').
         success(function(data, status, headers, config) {
             $scope.data = data
@@ -84,7 +94,8 @@ function PersonalDataCtrl($scope, $http, $timeout) {
         });
     $scope.$on('$viewContentLoaded', function(event){
         console.log('Person is loaded')
-        $('.personal001').addClass('personal001Enter')
+        $('.personal001').addClass('personal001Enter');
+        loading()
     });
 
 
@@ -102,7 +113,15 @@ function PropertyCtrl($scope, $http) {
             console.error(data)
         });
     $scope.$on('$viewContentLoaded', function(event){
-        console.log('Property is loaded')
+        console.log('Property is loaded');
+        TweenMax.to(".property1", 2, {top: '0px'});
+        TweenMax.to(".property2", 0.5, {top: '349px'});
+        TweenMax.to(".property3", 0.8, {top: '307px'});
+        TweenMax.to(".property4", 1.2, {top: '224px'});
+        TweenMax.to(".property5", 1.5, {top: '196px'});
+        TweenMax.to(".property6", 1.8, {top: '141px'});
+        TweenMax.to(".property7", 1.9, {top: '66px'});
+
     });
 };
 
@@ -116,6 +135,8 @@ function CompanyCtrl($scope, $http) {
         });
     $scope.$on('$viewContentLoaded', function(event){
         console.log('Company is loaded')
+
+
     });
 
 };
@@ -130,6 +151,7 @@ function VehicleCtrl($scope, $http){
         });
     $scope.$on('$viewContentLoaded', function(event){
         console.log('Vehicle is loaded')
+
     });
 }
 
@@ -150,6 +172,30 @@ function shadow ($timeout) {
     }
 };
 
+function addhover ($timeout) {
+    return {
+        link: function(scope, element) {
+            element.bind('mouseenter', function() {
+                TweenMax.to(element, .75, {
+                    backgroundColor:'rgba(0,0,0,0.08)'
+                });
+                TweenMax.to(element, 1.5, {
+                    borderRadius:"20px 20px 20px"
+                });
+
+            })
+            element.bind('mouseleave', function() {
+                TweenMax.to(element, 2, {
+                    backgroundColor:'rgba(0,0,0,0)',
+                    borderRadius:"0px 0px 0px"
+                });
+            })
+        }
+    }
+};
+
+
+
 (function () {
     angular.module('app', [
         'ui.router',                    // Routing
@@ -160,10 +206,12 @@ function shadow ($timeout) {
         .controller('CompanyCtrl', CompanyCtrl)
         .controller('VehicleCtrl', VehicleCtrl)
         .directive('shadow', shadow)
+        .directive('addhover', addhover)
         .config(config)
         .run(function($rootScope, $state) {
             $rootScope.$state = $state
-            $rootScope.$on("$stateChangeError", console.log.bind(console));
+            //$rootScope.$on("$stateChangeError", console.log.bind(console));
 
         });
 })();
+
