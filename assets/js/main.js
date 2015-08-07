@@ -37,16 +37,16 @@ function config($stateProvider, $urlRouterProvider) {
             controller: 'VehicleCtrl as vehicle',
         })
         .state('index.textAdjustment', {
-            url: "/textzoom",
+            controller: 'textCtrl as text',
         })
 }
 
 function loading() {
-    function hide() {
-        tl.to(".titleAnimated", 2, {opacity: 0})
-    }
-    tl = new TimelineMax({onComplete:hide})
-    tl.to(".titleAnimated", 0.25, {opacity: 1});
+    //function hide() {
+    //    tl.to(".titleAnimated", 2, {opacity: 0})
+    //}
+    //tl = new TimelineMax({onComplete:hide})
+    //tl.to(".titleAnimated", 0.25, {opacity: 1});
 }
 
 function MainCtrl($scope, $rootScope) {
@@ -57,24 +57,39 @@ function MainCtrl($scope, $rootScope) {
         t = 92
         if (isCatalogOpen === false) {
             isCatalogOpen = !isCatalogOpen
-            console.log('animate!')
-            TweenMax.to(".navText", 0.5, {opacity: '0'});
-            TweenMax.to(".navDownload", 0.5, {opacity: '0'});
+
+            TweenMax.to(".navDownload", 0.5, {opacity: '0', 'z-index': -1});
 
             TweenMax.to(".navPersonal", 0.5, {opacity: '1',  left: (o+t) + 'px'});
             TweenMax.to(".navProperty", 0.8, {opacity: '1', left: (o+t*2.2) + 'px'});
             TweenMax.to(".navCompany", 1.2, {opacity: '1', left: (o+t*3.4) + 'px'});
             TweenMax.to(".navVehicle", 1.5, {opacity: '1', left: (o+t*4.6) + 'px'});
+            TweenMax.to(".navText", 1.5, {opacity: '1', left: (o+t*5.8) + 'px'});
         } else {
             isCatalogOpen = !isCatalogOpen
-            TweenMax.to(".navText", 2, {opacity: '1'});
-            TweenMax.to(".navDownload", 2, {opacity: '1'});
+            TweenMax.to(".navText", 1.5, {opacity: '1', left: (o+t) + 'px'});
+            TweenMax.to(".navDownload", 2, {opacity: '1', 'z-index': 2});
             TweenMax.to(".navPersonal", 0.5, {opacity: '0',  left: o + 'px'});
             TweenMax.to(".navProperty", 1.5, {opacity: '0', left: o + 'px'});
             TweenMax.to(".navCompany", 2, {opacity: '0', left: o + 'px'});
             TweenMax.to(".navVehicle", 2, {opacity: '0', left: o + 'px'});
         }
     }
+
+    var isZoom = false
+    $scope.toogleZoom = function () {
+        if (isZoom === false) {
+            isZoom = !isZoom
+            TweenMax.to(".itemKey", 0.1, {fontSize: 18 + 'px'});
+            TweenMax.to(".itemValue", 0.1, {fontSize: 16 + 'px'});
+        } else {
+            isZoom = !isZoom
+            TweenMax.to(".itemKey", 0.1, {fontSize: 15 + 'px'});
+            TweenMax.to(".itemValue", 0.1, {fontSize: 14 + 'px'});
+
+        }
+    }
+
     $rootScope.$on('$viewContentLoading',
         function(event, viewConfig){
             loading()
@@ -154,6 +169,7 @@ function VehicleCtrl($scope, $http){
 
     });
 }
+
 
 function shadow ($timeout) {
     return {
