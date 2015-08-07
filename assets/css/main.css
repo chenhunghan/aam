@@ -614,9 +614,12 @@ address h6{
         margin: 2vh 0 1vh 2vw;
         z-index: 1000;
     }
-
-
 }
+
+@media only screen and (max-device-width: 1024px) {
+    .mainNav {
+        display: none;
+    }
 
 @media only screen and (max-width : 568px) {
 
