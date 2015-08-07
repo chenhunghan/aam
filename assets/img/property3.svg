@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="270px" height="98px" viewBox="0 0 270 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>property3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="property3" sketch:type="MSLayerGroup">
+            <path d="M23.053,97.445 L258.499,47.95 L269.468,0.227 L0.386,6.199 L23.053,97.445 Z" id="Shape" fill="#FFD100" sketch:type="MSShapeGroup"></path>
+            <path d="M31.261,28.835 L37.581,60.722 L83.545,55.551 L80.386,28.835 L31.261,28.835 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <g id="Group" transform="translate(28.000000, 41.000000)" fill="#FFD100" sketch:type="MSShapeGroup">
+                <path d="M0.243,6.132 L61.188,1.767" id="Shape"></path>
+                <rect id="Rectangle-path" transform="translate(30.730801, 3.995095) rotate(85.934385) translate(-30.730801, -3.995095) " x="29.7532853" y="-26.5554096" width="1.95503232" height="61.10101"></rect>
+            </g>
+            <g id="Group" transform="translate(56.000000, 26.000000)" fill="#FFD100" sketch:type="MSShapeGroup">
+                <path d="M1.193,0.947 L4.239,38.7" id="Shape"></path>
+                <rect id="Rectangle-path" transform="translate(2.565261, 19.904320) rotate(85.388614) translate(-2.565261, -19.904320) " x="-16.371943" y="18.9267834" width="37.8744088" height="1.95507272"></rect>
+            </g>
+            <g id="Group" transform="translate(54.000000, 25.000000)" fill="#FFD100" sketch:type="MSShapeGroup">
+                <path d="M1.67,0.232 L4.716,37.983" id="Shape"></path>
+                <rect id="Rectangle-path" transform="translate(3.243900, 19.233239) rotate(85.382903) translate(-3.243900, -19.233239) " x="-15.6939568" y="18.2556951" width="37.8757136" height="1.95508845"></rect>
+            </g>
+            <g id="Group" transform="translate(25.000000, 43.000000)" fill="#FFD100" sketch:type="MSShapeGroup">
+                <path d="M0.746,6.087 L61.69,1.722" id="Shape"></path>
+                <rect id="Rectangle-path" transform="translate(31.226606, 3.797395) rotate(85.899687) translate(-31.226606, -3.797395) " x="30.2496459" y="-26.7523677" width="1.95392087" height="61.0995256"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

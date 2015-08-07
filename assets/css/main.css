@@ -357,6 +357,40 @@ address h6{
     z-index: -1;
 }
 
+.personal001 {
+    z-index: 100;
+}
+
+.personal001:hover {
+
+    -webkit-animation: scale 3s ease infinite;
+
+}
+
+.personal001Enter {
+
+    -webkit-animation: scale 5s ease 1;
+
+}
+
+
+@-webkit-keyframes scale {
+    0% {
+        shape-inside: circle(350px at center);
+        -webkit-clip-path: circle(350px at center);
+    }
+    50% {
+        shape-inside: circle(150px at center);
+        -webkit-clip-path: circle(150px at center);
+    }
+    100% {
+        shape-inside: circle(350px at center);
+        -webkit-clip-path: circle(350px at center);
+    }
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

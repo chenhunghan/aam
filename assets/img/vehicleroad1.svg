@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="208px" height="393px" viewBox="0 0 208 393" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>vehicleroad1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="vehicleroad1" sketch:type="MSLayerGroup">
+            <path d="M26.886,142.66 C20.9,140.137 17.476,135.474 15.534,130.663" id="Shape" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M201.462,392.447 L201.462,392.447 C198.138,392.447 195.442,389.753 195.442,386.43 L195.442,325.709 C195.442,322.386 198.137,319.692 201.462,319.692 L201.462,319.692" id="Shape" fill="#BCBEC0" sketch:type="MSShapeGroup"></path>
+            <path d="M64.794,5.487 L64.794,5.487 C64.794,8.421 62.417,10.8 59.482,10.8 L5.873,10.8 C2.939,10.8 0.561,8.421 0.561,5.487" id="Shape" fill="#BCBEC0" sketch:type="MSShapeGroup"></path>
+            <path d="M117.716,384.066 L117.677,384.066 C102.269,384.066 87.304,381.042 73.202,375.077 C59.597,369.322 47.384,361.09 36.903,350.608 C26.421,340.126 18.186,327.913 12.433,314.307 C6.467,300.205 3.444,285.243 3.444,269.834 L3.444,2.688 L61.267,2.688 L61.267,269.834 C61.267,300.927 86.554,326.224 117.643,326.243 L201.299,326.011 L201.461,383.834 L117.716,384.066 L117.716,384.066 Z" id="Shape" fill="#27AAE1" sketch:type="MSShapeGroup"></path>
+            <path d="M0.56,5.487 L0.56,5.487 C0.56,2.553 2.939,0.175 5.872,0.175 L59.481,0.175 C62.417,0.175 64.793,2.553 64.793,5.487" id="Shape" fill="#BCBEC0" sketch:type="MSShapeGroup"></path>
+            <path d="M201.462,319.692 C204.784,319.692 207.478,322.386 207.478,325.709 L207.478,386.43 C207.478,389.753 204.785,392.447 201.462,392.447" id="Shape" fill="#BCBEC0" sketch:type="MSShapeGroup"></path>
+            <g id="Group" transform="translate(32.000000, 5.000000)" stroke="#FFFFFF" stroke-width="4" sketch:type="MSShapeGroup">
+                <path d="M0.677,0.487 L0.677,4.487" id="Shape"></path>
+                <path d="M0.677,12.534 L0.677,269.887 C0.677,269.887 0.755,350.675 95.7,351.069 L161.359,351.069" id="Shape" stroke-dasharray="8.0471,8.0471"></path>
+                <path d="M165.383,351.069 L169.383,351.069" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

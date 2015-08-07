@@ -1,4 +1,3 @@
-console.log('mian.js loaded')
 
 function config($stateProvider, $urlRouterProvider) {
 
@@ -7,7 +6,6 @@ function config($stateProvider, $urlRouterProvider) {
         .otherwise("/index/404");
 
     $stateProvider
-
         .state('index', {
             abstract: true,
             url: "/index",
@@ -20,26 +18,30 @@ function config($stateProvider, $urlRouterProvider) {
         })
         .state('index.personalData', {
             url: "/personalData",
-            templateUrl: "views/personalData.html"
+            templateUrl: "views/personalData.html",
+            controller: 'PersonalDataCtrl as person',
         })
         .state('index.property', {
             url: "/property",
-            templateUrl: "views/property.html"
+            templateUrl: "views/property.html",
+            controller: 'PropertyCtrl as property',
         })
         .state('index.company', {
             url: "/company",
-            templateUrl: "views/company.html"
+            templateUrl: "views/company.html",
+            controller: 'CompanyCtrl as company',
         })
         .state('index.vehicle', {
             url: "/vehicle",
-            templateUrl: "views/vehicle.html"
+            templateUrl: "views/vehicle.html",
+            controller: 'VehicleCtrl as vehicle',
         })
         .state('index.textAdjustment', {
-            url: "/vehicle"
+            url: "/textzoom",
         })
 }
 
-function MainCtrl($scope) {
+function MainCtrl($scope, $rootScope) {
     var isCatalogOpen = false
     $scope.toogleSlide = function () {
         o = 145
@@ -64,20 +66,40 @@ function MainCtrl($scope) {
             TweenMax.to(".navVehicle", 2, {opacity: '0', left: o + 'px'});
         }
     }
+    $rootScope.$on('$viewContentLoading',
+        function(event, viewConfig){
+            console.log('loading....')
+        })
+    $scope.shadow = function() {
+        TweenMax.to(".titleLogo", .3, {
+            boxShadow: "10px 10px 10px",
+        });
+    }
+    $scope.removeShadow = function() {
+        TweenMax.to(".titleLogo", .2, {
+            boxShadow: "0px 0px 0px",
+        });
+    }
 
 };
 
-function PersonalDataCtrl($scope, $http) {
+function PersonalDataCtrl($scope, $http, $timeout) {
     $http.get('assets/data/personalData.json').
         success(function(data, status, headers, config) {
             $scope.data = data
-            l = data.lenght
-            $scope.dataRowOne = data.slice(0,4);
-            $scope.dataRowTwo = data.slice(5,l);
+
         }).
         error(function(data, status, headers, config) {
             console.error(data)
         });
+    $scope.$on('$viewContentLoaded', function(event){
+        console.log('Person is loaded')
+        $('.personal001').addClass('personal001Enter')
+    });
+
+
+
+
 
 };
 
@@ -89,7 +111,9 @@ function PropertyCtrl($scope, $http) {
         error(function(data, status, headers, config) {
             console.error(data)
         });
-
+    $scope.$on('$viewContentLoaded', function(event){
+        console.log('Property is loaded')
+    });
 };
 
 function CompanyCtrl($scope, $http) {
@@ -100,6 +124,9 @@ function CompanyCtrl($scope, $http) {
         error(function(data, status, headers, config) {
             console.error(data)
         });
+    $scope.$on('$viewContentLoaded', function(event){
+        console.log('Company is loaded')
+    });
 
 };
 
@@ -111,18 +138,10 @@ function VehicleCtrl($scope, $http){
         error(function(data, status, headers, config) {
             console.error(data)
         });
+    $scope.$on('$viewContentLoaded', function(event){
+        console.log('Vehicle is loaded')
+    });
 }
-
-function minimalizaSidebar($timeout) {
-    return {
-        restrict: 'A',
-        template: '<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="" ng-click="minimalize()"><i class="fa fa-bars"></i></a>',
-        controller: function ($scope, $element) {
-
-        }
-    };
-};
-
 
 (function () {
     angular.module('app', [
