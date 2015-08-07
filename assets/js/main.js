@@ -70,16 +70,6 @@ function MainCtrl($scope, $rootScope) {
         function(event, viewConfig){
             console.log('loading....')
         })
-    $scope.shadow = function() {
-        TweenMax.to(".titleLogo", .3, {
-            boxShadow: "10px 10px 10px",
-        });
-    }
-    $scope.removeShadow = function() {
-        TweenMax.to(".titleLogo", .2, {
-            boxShadow: "0px 0px 0px",
-        });
-    }
 
 };
 
@@ -143,6 +133,23 @@ function VehicleCtrl($scope, $http){
     });
 }
 
+function shadow ($timeout) {
+    return {
+        link: function(scope, element) {
+            element.bind('mouseenter', function() {
+                TweenMax.to(element, .3, {
+                    textShadow: "5px 5px 1px rgba(0, 0, 0, 0.2)",
+                });
+            })
+            element.bind('mouseleave', function() {
+                TweenMax.to(element, .2, {
+                    textShadow: "0px 0px 0px",
+                });
+            })
+        }
+    }
+};
+
 (function () {
     angular.module('app', [
         'ui.router',                    // Routing
@@ -152,6 +159,7 @@ function VehicleCtrl($scope, $http){
         .controller('PropertyCtrl', PropertyCtrl)
         .controller('CompanyCtrl', CompanyCtrl)
         .controller('VehicleCtrl', VehicleCtrl)
+        .directive('shadow', shadow)
         .config(config)
         .run(function($rootScope, $state) {
             $rootScope.$state = $state
