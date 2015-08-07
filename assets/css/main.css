@@ -216,7 +216,7 @@ address h6{
    ========================================================================== */
 
 .personal001, .personal002, .personal003, .personal004, .personal005,
-.property1, .property2, .property3, .property4, .property5, .property6, .property7,
+.house, .property1, .property2, .property3, .property4, .property5, .property6, .property7,
 .cash001, .cash002, .cash003,
 .vehicle, .vehicleroad1, .vehicleroad2, .vehicleroad3
 
@@ -249,45 +249,47 @@ address h6{
     right: 16vw;
 }
 
-.property1, .property2, .property3, .property4, .property5, .property6, .property7 {
-    width: 18vw;
+.house {
     top: 10vh;
-    right: 10vw;
+    right: 30vw;
+}
+
+.property1 {
+    top: 0px;
+    left: 0px;
+    width: 18vw;
 }
 
 .property2 {
-    top: 55vh;
-    right: 6vw;
+    width: 18vw;
+    top: 0px;
+    left: 0px;
+
 }
 
 .property3 {
     width: 15vw;
-    top: 49.7vh;
-    right: 8vw;
+
 }
 
 .property4 {
     width: 18vw;
-    top: 39.2vh;
-    right: 6.5vw;
+
 }
 
 .property5 {
     width: 12vw;
-    top: 35.5vh;
-    right: 6vw;
+
 }
 
 .property6 {
     width: 10.5vw;
-    top: 28.3vh;
-    right: 6.8vw;
+
 }
 
 .property7 {
     width: 10.5vw;
-    top: 18.5vh;
-    right: 7.5vw;
+
 }
 
 .cash001 {
