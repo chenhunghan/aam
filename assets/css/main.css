@@ -611,7 +611,7 @@ address h6{
         width: 30vw;
     }
     .minNav {
-        margin: 2vh 0 1vh 2vw;
+        margin: 10px 0 0 10px;
         z-index: 1000;
     }
 }
@@ -624,15 +624,15 @@ address h6{
 @media only screen and (max-width : 568px) {
 
     body {
-        padding-top: 0;
+        padding: 0;
         margin: 0;
     }
     .personal001 {
         width: 20vw;
     }
-
-    .personal003 {
-
+    .minNav {
+        margin: 10px 0 0 10px;
+        z-index: 1000;
     }
 }
 
