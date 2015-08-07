@@ -634,7 +634,7 @@ address h6{
         margin: 10px 0 0 10px;
         z-index: 1000;
     }
-    .vehicle, .vehicleroad1{
+    .vehicleroad1{
         display: none;
     }
 }
