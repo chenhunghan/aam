@@ -3,9 +3,9 @@
             <a ui-sref="index.personalData">
                 <img src="assets/img/personal002.svg" class='titleLogo'/>
             </a>
-        <div class="titleBlock">
+        <div class="titleBlock" addblurhover>
             <a ui-sref="index.personalData">
-                <img src="assets/img/title.svg" class="title"/>
+                <img src="assets/img/title.svg" class="title" />
             </a>
             <!--
             <div class="titleAnimated">
@@ -83,7 +83,21 @@
         -->
         </div>
 
-        <nav class="mainNav visible-lg" role="navigation">
+        <div class="row visible-sm visible-xs">
+            <div class="col-sm-10 col-sm-offet-1">
+                <nav class="minNav" role="navigation">
+                    <a ui-sref="index.personalData"><span class="navLinkMini">personal</span></a>
+                    <a ui-sref="index.property"><span class="navLinkMini">property</span></a>
+                    <a ui-sref="index.company"><span class="navLinkMini">company</span></a>
+                    <a ui-sref="index.vehicle"><span class="navLinkMini">vehicle</span></a>
+                    <span class="navLinkMini" ng-click="toogleZoom()">zoom</span>
+                    <a href="assets/pdf/download.pdf"><span class="navLinkMini">download</span></a>
+                </nav>
+            </div>
+        </div>
+
+
+        <nav class="mainNav visible-md visible-lg" role="navigation">
             <div class="row">
                 <div class="col-lg-2 navCatalog">
                     <div ng-click="toogleSlide()">

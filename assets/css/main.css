@@ -143,6 +143,7 @@ body {
     margin-bottom: 40px;
 }
 
+
 .navUl{
     list-style: none;
 }
@@ -153,7 +154,11 @@ body {
     height: 75px;
 }
 
-.navLink {
+.minNav {
+    margin: -10vh 0 0  10vw;
+}
+
+.navLink, .navLinkMini {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: 12px;
@@ -161,6 +166,20 @@ body {
     display: inline-block;
     margin:8px 0 0 18px;
 }
+
+.navLinkMini {
+    display: inline-block;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 9px 8px 9px;
+    background: rgba(0,0,0,0.07);
+}
+
+.navLinkMini:hover {
+    background: rgba(0,0,0,0.12);
+
+}
+
 .navLinkPlus {
     font-size: 15px;
 }
@@ -291,7 +310,7 @@ address h6{
 
 {
     position: absolute;
-    z-index: -100000;
+    z-index: 1;
 }
 
 .houseAll{
@@ -575,11 +594,14 @@ address h6{
 /* Small devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
     .titleLogo, .titleAnimated, .personal003,
-    .property1, .property2, .property3, .property4, .property5, .property6, .property7{
+    .property1, .property2, .property3, .property4, .property5, .property6, .property7,
+    .cash001{
         display: none;
     }
     .houseAll{
         opacity: 1;
+        top: -5vh;
+        left: 10vw;
     }
     body {
         padding-top: 10px;
@@ -588,6 +610,11 @@ address h6{
     .personal001 {
         width: 30vw;
     }
+    .minNav {
+        margin: 2vh 0 1vh 2vw;
+        z-index: 1000;
+    }
+
 
 }
 

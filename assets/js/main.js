@@ -59,12 +59,14 @@ function MainCtrl($scope, $rootScope) {
             isCatalogOpen = !isCatalogOpen
 
             TweenMax.to(".navDownload", 0.5, {opacity: '0', 'z-index': -1});
-
             TweenMax.to(".navPersonal", 0.5, {opacity: '1',  left: (o+t) + 'px'});
             TweenMax.to(".navProperty", 0.8, {opacity: '1', left: (o+t*2.2) + 'px'});
             TweenMax.to(".navCompany", 1.2, {opacity: '1', left: (o+t*3.4) + 'px'});
             TweenMax.to(".navVehicle", 1.5, {opacity: '1', left: (o+t*4.6) + 'px'});
             TweenMax.to(".navText", 1.5, {opacity: '1', left: (o+t*5.8) + 'px'});
+
+            getBlur('.title', 3)
+
         } else {
             isCatalogOpen = !isCatalogOpen
             TweenMax.to(".navText", 1.5, {opacity: '1', left: (o+t) + 'px'});
@@ -73,6 +75,8 @@ function MainCtrl($scope, $rootScope) {
             TweenMax.to(".navProperty", 1.5, {opacity: '0', left: o + 'px'});
             TweenMax.to(".navCompany", 2, {opacity: '0', left: o + 'px'});
             TweenMax.to(".navVehicle", 2, {opacity: '0', left: o + 'px'});
+
+            getClear('.title', 3)
         }
     }
 
@@ -210,6 +214,41 @@ function addhover ($timeout) {
     }
 };
 
+function getBlur(element, blurAmount) {
+    var blurElement = {a:0};
+    TweenMax.to(blurElement, 1, {a:blurAmount, onUpdate:applyBlur});
+    function applyBlur()
+    {
+        TweenMax.set(element, {webkitFilter:"blur(" + blurElement.a + "px)",filter:"blur(" + blurElement.a + "px)"});
+    };
+    TweenMax.to(element, 1, {opacity: 0.5})
+}
+
+function getClear(element, blurAmount) {
+    var blurElement = {a:blurAmount};
+    TweenMax.to(blurElement, 1, {a:0, onUpdate:applyBlur});
+    function applyBlur()
+    {
+        TweenMax.set(element, {webkitFilter:"blur(" + blurElement.a + "px)",filter:"blur(" + blurElement.a + "px)"});
+    };
+    TweenMax.to(element, 1, {opacity: 1})
+}
+function addblurhover () {
+    return {
+        link: function(scope, element) {
+            var blurAmount = 3
+            element.bind('mouseenter', function() {
+                getBlur(element, blurAmount)
+            })
+            element.bind('mouseleave', function() {
+                getClear(element, blurAmount)
+            })
+        }
+    }
+};
+
+
+
 
 
 (function () {
@@ -223,6 +262,7 @@ function addhover ($timeout) {
         .controller('VehicleCtrl', VehicleCtrl)
         .directive('shadow', shadow)
         .directive('addhover', addhover)
+        .directive('addblurhover', addblurhover)
         .config(config)
         .run(function($rootScope, $state) {
             $rootScope.$state = $state
