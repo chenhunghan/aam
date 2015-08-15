@@ -472,10 +472,8 @@ address h6{
 }
 
 .personal001Enter {
-    /*-webkit-animation: scale 8s ease 1;*/
-    /*animation: scale 8s ease 1;*/
-    -webkit-animation: simpleScale 7s ease 1;
-    animation: simpleScale 7s ease 1;
+    -webkit-animation: simple 7s ease 1; /* Safari 4+ */
+    animation:         simple 7s ease 1; /* IE 10+, Fx 29+ */
 }
 
 .property1, .property2, .property3, .property4, .property5, .property6, .property7{
@@ -492,27 +490,31 @@ address h6{
     top: 90%;
 }
 
-@-webkit-keyframes simpleScale {
+@-webkit-keyframes simple {
     0% {
-        shape-inside: circle(150px at center);
-        -webkit-clip-path: circle(150px at center);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
     }
     100% {
-        shape-inside: circle(350px at center);
-        -webkit-clip-path: circle(350px at center);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
     }
 }
 
-@keyframes simpleScale {
+@keyframes simple {
     0% {
-        shape-inside: circle(150px at center);
-        -webkit-clip-path: circle(150px at center);
+        -webkit-clip-path: circle(150px at 50% 50%);
+        clip-path: circle(150px at 50% 50%);
+
     }
     100% {
-        shape-inside: circle(350px at center);
-        -webkit-clip-path: circle(350px at center);
+
+        -webkit-clip-path: circle(350px at 50% 50%);
+        clip-path: circle(350px at 50% 50%);
+
     }
 }
+
 
 /*@-webkit-keyframes scale {*/
     /*0% {*/
