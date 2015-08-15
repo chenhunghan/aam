@@ -167,6 +167,10 @@ body {
     margin:8px 0 0 18px;
 }
 
+.navBack {
+    margin:8px 0 0 25px;
+}
+
 .navLinkMini {
     display: inline-block;
     font-size: 22px;
@@ -183,6 +187,7 @@ body {
 .navLinkPlus {
     font-size: 15px;
 }
+
 
 /* ==========================================================================
    Footer
@@ -231,72 +236,65 @@ address h6{
     padding: 7px 0 7px 0;
 }
 
-.itemKey{
+.descBlock {
+    height: 100px;
+}
+
+.prescriptionRow, .prescriptionFirstRow {
+    padding:  20px 0 0 0;
+    height: 115px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.prescriptionFirstRow {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.yellowCell, .grayCellOne, .grayCellTwo, .grayCellThree, .grayCellFour {
+    padding: 13px 10px 50px 10px;
+    height: 100%;
+}
+
+.yellowCell {
+    background-color: #FECF2F;
+}
+
+.grayCellOne {
+    background-color: #A7A9AC;
+}
+
+.grayCellTwo {
+    background-color: #D1D2D4;
+}
+
+.grayCellThree {
+    background-color: #E7E8E9;
+}
+
+.grayCellFour {
+    background-color: #f9f9f9;
+}
+
+.itemKey, .itemYellow, {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
 }
 
+.itemYellow {
+    display: inline-block;
+    background-color: #FECF2F;
+    margin: 0 0 15px 0;
+}
+
 .itemValue {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 14px;
     overflow: hidden;
     word-wrap: break-word;
-}
-
-/* ==========================================================================
-   Logo Animation
-   ========================================================================== */
-
-.text--transparent {
-    fill: transparent;
-}
-
-.anim-shape {
-    -webkit-transform-origin: 0x 150px;
-    -ms-transform-origin: 0x 150px;
-    transform-origin: 0x 150px;
-    -webkit-transform: scale(0, 1) translate(0, 0);
-    -ms-transform: scale(0, 1) translate(0, 0);
-    transform: scale(0, 1) translate(0, 0);
-    /*-webkit-animation: moving-panel 1s infinite alternate;*/
-    /*animation: moving-panel 1s infinite alternate;*/
-    -webkit-animation: moving-panel 1s;
-    animation: moving-panel 1s;
-}
-
-.colortext .anim-shape:nth-child(1) {
-    fill: #0E1826;
-}
-
-.colortext .anim-shape:nth-child(2) {
-    fill: #166973;
-}
-
-.colortext .anim-shape:nth-child(3) {
-    fill: #65BFA6;
-}
-
-.colortext .anim-shape:nth-child(4) {
-    fill: #F2CD5C;
-}
-
-.colortext .anim-shape:nth-child(5) {
-    fill: #F26444;
-}
-@-webkit-keyframes moving-panel {
-    100% {
-        -webkit-transform: scale(1, 1) translate(0px, 0);
-        transform: scale(1, 1) translate(0px, 0);
-    }
-}
-
-@keyframes moving-panel {
-    100% {
-        -webkit-transform: scale(1, 1) translate(0px, 0);
-        transform: scale(1, 1) translate(0px, 0);
-    }
 }
 
 /* ==========================================================================
@@ -394,49 +392,45 @@ address h6{
 
 .cash001 {
     width: 32vw;
-    top: 10vh;
-    right: 6vw;
+    top: 10%;
+    right: 7%;
 }
 
 .cash002 {
     width: 24vw;
-    top: 45vh;
-    right: 7vw;
+    top: 45%;
+    right: 8%;
 }
 
 .cash003 {
-    width: 24vw;
-    top: 90vh;
-    left: 7vw;
+    width: 20vw;
+    top: 35vw;
+    left: 1%;
 }
 
 .vehicle {
     width: 3vw;
-    top: 14vh;
-    right: 19.6vw;
-}
-
-.vehicleroad1, .vehicleroad2, .vehicleroad3 {
-    width: 5vw;
-
+    top: 15%;
+    right: 13.6%;
 }
 
 .vehicleroad1 {
     width: 13vw;
-    top: 5vh;
-    right: 10vw;
+    top: 10%;
+    right: 4%;
 }
 
 .vehicleroad2 {
     width: 21vw;
-    top: 65vh;
-    right: 10vw;
+    top: 65%;
+    right: 4%;
 }
 
 
 .vehicleroad3 {
-    top: 120vh;
-    left: 30vw;
+    width: 5vw;
+    top: 95%;
+    left: 5%;
 }
 
 /* ==========================================================================
@@ -455,7 +449,7 @@ address h6{
     z-index: 0;
 }
 
-.navText {}
+
 
 
 .navText, .navDownload {
@@ -473,35 +467,33 @@ address h6{
 
 }
 
-.personal001 {
-    z-index: 100;
-}
-
-.personal001:hover {
-
-    -webkit-animation: scale 3s ease infinite;
-
+.profileImg {
+    width: 100%;
 }
 
 .personal001Enter {
-
-    -webkit-animation: scale 5s ease 1;
-
+    /*-webkit-animation: scale 8s ease 1;*/
+    /*animation: scale 8s ease 1;*/
+    -webkit-animation: simpleScale 7s ease 1;
+    animation: simpleScale 7s ease 1;
 }
 
-.property1, .property2, .property3, .property4, .property5, .property6, .property7 {
+.property1, .property2, .property3, .property4, .property5, .property6, .property7{
     top: -500px;
 }
 
+.cash001 {
+    top: -50%;
+    right: 70%;
+}
 
+.cash002 {
+    right: -50%;
+    top: 90%;
+}
 
-
-@-webkit-keyframes scale {
+@-webkit-keyframes simpleScale {
     0% {
-        shape-inside: circle(350px at center);
-        -webkit-clip-path: circle(350px at center);
-    }
-    50% {
         shape-inside: circle(150px at center);
         -webkit-clip-path: circle(150px at center);
     }
@@ -510,6 +502,47 @@ address h6{
         -webkit-clip-path: circle(350px at center);
     }
 }
+
+@keyframes simpleScale {
+    0% {
+        shape-inside: circle(150px at center);
+        -webkit-clip-path: circle(150px at center);
+    }
+    100% {
+        shape-inside: circle(350px at center);
+        -webkit-clip-path: circle(350px at center);
+    }
+}
+
+/*@-webkit-keyframes scale {*/
+    /*0% {*/
+        /*shape-inside: circle(350px at center);*/
+        /*-webkit-clip-path: circle(350px at center);*/
+    /*}*/
+    /*50% {*/
+        /*shape-inside: circle(150px at center);*/
+        /*-webkit-clip-path: circle(150px at center);*/
+    /*}*/
+    /*100% {*/
+        /*shape-inside: circle(350px at center);*/
+        /*-webkit-clip-path: circle(350px at center);*/
+    /*}*/
+/*}*/
+
+/*@keyframes scale {*/
+    /*0% {*/
+        /*shape-inside: circle(350px at center);*/
+        /*-webkit-clip-path: circle(350px at center);*/
+    /*}*/
+    /*50% {*/
+        /*shape-inside: circle(150px at center);*/
+        /*-webkit-clip-path: circle(150px at center);*/
+    /*}*/
+    /*100% {*/
+        /*shape-inside: circle(350px at center);*/
+        /*-webkit-clip-path: circle(350px at center);*/
+    /*}*/
+/*}*/
 
 
 
@@ -595,9 +628,27 @@ address h6{
 @media only screen and (max-width: 768px) {
     .titleLogo, .titleAnimated, .personal003,
     .property1, .property2, .property3, .property4, .property5, .property6, .property7,
-    .cash001{
+    .cash001, .cash002, .cash003{
         display: none;
     }
+    .vehicle {
+        width: 3vw;
+        top: 43%;
+        right: 13.6%;
+    }
+
+    .vehicleroad1 {
+        width: 13vw;
+        top: 40%;
+        right: 4%;
+    }
+
+    .vehicleroad2 {
+        width: 21vw;
+        top: 65%;
+        right: 4%;
+    }
+
     .houseAll{
         opacity: 1;
         top: -5vh;
@@ -613,6 +664,10 @@ address h6{
     .minNav {
         margin: 10px 0 0 10px;
         z-index: 1000;
+    }
+
+    .profileImg {
+        width: 50%;
     }
 }
 
@@ -637,6 +692,8 @@ address h6{
     .vehicleroad1, .vehicleroad3{
         display: none;
     }
+
+
 }
 }
 

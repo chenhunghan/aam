@@ -65,7 +65,6 @@ function MainCtrl($scope, $rootScope) {
             TweenMax.to(".navVehicle", 1.5, {opacity: '1', left: (o+t*4.6) + 'px'});
             TweenMax.to(".navText", 1.5, {opacity: '1', left: (o+t*5.8) + 'px'});
 
-            getBlur('.title', 3)
 
         } else {
             isCatalogOpen = !isCatalogOpen
@@ -76,7 +75,7 @@ function MainCtrl($scope, $rootScope) {
             TweenMax.to(".navCompany", 2, {opacity: '0', left: o + 'px'});
             TweenMax.to(".navVehicle", 2, {opacity: '0', left: o + 'px'});
 
-            getClear('.title', 3)
+
         }
     }
 
@@ -96,7 +95,6 @@ function MainCtrl($scope, $rootScope) {
 
     $rootScope.$on('$viewContentLoading',
         function(event, viewConfig){
-            loading()
         })
 
 };
@@ -105,21 +103,15 @@ function PersonalDataCtrl($scope, $http, $timeout) {
 
     $http.get('assets/data/personalData.json').
         success(function(data, status, headers, config) {
-            $scope.data = data
-
+            $scope.dataRowOne = data.slice(0, 3)
+            $scope.dataRowTwo = data.slice(3, 99)
         }).
         error(function(data, status, headers, config) {
             console.error(data)
         });
     $scope.$on('$viewContentLoaded', function(event){
-        console.log('Person is loaded')
         $('.personal001').addClass('personal001Enter');
-        loading()
     });
-
-
-
-
 
 };
 
@@ -132,7 +124,6 @@ function PropertyCtrl($scope, $http) {
             console.error(data)
         });
     $scope.$on('$viewContentLoaded', function(event){
-        console.log('Property is loaded');
         TweenMax.to(".property1", 2, {top: '0px'});
         TweenMax.to(".property2", 0.5, {top: '349px'});
         TweenMax.to(".property3", 0.8, {top: '307px'});
@@ -153,10 +144,9 @@ function CompanyCtrl($scope, $http) {
             console.error(data)
         });
     $scope.$on('$viewContentLoaded', function(event){
-        console.log('Company is loaded')
-
-
-    });
+        TweenMax.to(".cash001", 0.5, {top: '10%', right: '7%'});
+        TweenMax.to(".cash002", 0.5, {top: '45%', right:'8%' });
+    })
 
 };
 
@@ -169,7 +159,6 @@ function VehicleCtrl($scope, $http){
             console.error(data)
         });
     $scope.$on('$viewContentLoaded', function(event){
-        console.log('Vehicle is loaded')
 
     });
 }
@@ -197,7 +186,7 @@ function addhover ($timeout) {
         link: function(scope, element) {
             element.bind('mouseenter', function() {
                 TweenMax.to(element, .75, {
-                    backgroundColor:'rgba(0,0,0,0.08)'
+                    backgroundColor:'rgba(0,0,0,0.035)'
                 });
                 TweenMax.to(element, 1.5, {
                     borderRadius:"20px 20px 20px"

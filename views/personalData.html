@@ -1,7 +1,17 @@
 <div class="row">
     <div class="col-xs-12 col-sm-9 col-lg-8 col-sm-offset-1 col-lg-offset-2">
+
+        <div class="row">
+            <div class="col-xs-10 col-lg-6 col-xs-offset-1 col-lg-offset-0 descBlock">
+                <span class="itemKey itemYellow">HENKILÖTIEDOT (PERSON DATA)</span>
+                <br/>
+                <span class="itemValue">Lähde Väestötietojärjestelmä Rekisteripitäjä Väestörekisterikeskus</span>
+            </div>
+        </div>
+
         <div class="row contentRow">
-            <div class="col-xs-10 col-lg-6 col-xs-offset-1 col-lg-offset-0" ng-repeat="i in data">
+
+            <div class="col-xs-10 col-lg-6 col-xs-offset-1 col-lg-offset-0" ng-repeat="i in dataRowOne">
                 <h3 class="subtitle" shadow>{{i.subtitle}} +</h3>
                 <div class="row itemRow" ng-repeat="(key, value) in i.info" addhover>
                     <div class="col-lg-6 col-md-5 col-sm-5">
@@ -12,14 +22,139 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-xs-10 col-lg-6 col-xs-offset-1 col-lg-offset-0">
+                <div class="row itemRow">
+                    <h3 class="subtitle" > </h3>
+                    <div class="col-lg-6 col-md-5 col-sm-5">
+                        <img src="assets/img/profile.png" class="profileImg"/>
+                    </div>
+                    <div class="col-lg-6 col-md-5 col-sm-5">
+                        <h6 class="itemYellow">Poliisi (POLICE)</h6>
+                        <br/>
+                        <span class="itemValue">persons official passport photo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-10 col-lg-6 col-xs-offset-1 col-lg-offset-0" ng-repeat="i in dataRowTwo">
+                <h3 class="subtitle" shadow>{{i.subtitle}} +</h3>
+                <div class="row itemRow" ng-repeat="(key, value) in i.info" addhover>
+                    <div class="col-lg-6 col-md-5 col-sm-5">
+                        <span class="itemKey">{{key}}</span>
+                    </div>
+                    <div class="col-lg-6 col-md-5 col-sm-5">
+                        <span class="itemValue">{{value}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-12 col-xs-offset-0 col-lg-offset-0 hidden-sm">
+
+                <h3 class="subtitle"></h3>
+                <h6 class="itemYellow">Sähköiset reseptit (ELECTRONIC PRESCRIPTIONS)</h6>
+
+                <div class="row itemRow">
+                    <div class="col-lg-4 col-md-3 col-sm-3">
+                        <span class="itemKey">Rekisterinpitäjä</span>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-3">
+                        <span class="itemValue">Kansallinen terveysarkisto (Kanta)</span>
+                    </div>
+                </div>
+
+                <div class="row itemRow">
+                    <div class="col-lg-4 col-md-3 col-sm-3">
+                        <span class="itemKey">Lähde</span>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-3">
+                        <span class="itemValue">Sosiaali- ja terveysministeriö, Kela ja Terveyden ja hyvinvoinnin laitos THL</span>
+                    </div>
+                </div>
+
+                <div class="row prescriptionFirstRow">
+                    <div class="col-lg-2 yellowCell">
+                        <span>Määräyspäivä</span>
+                    </div>
+                    <div class="col-lg-3 grayCellOne">
+                        <span>Lääke</span>
+                    </div>
+                    <div class="col-lg-2 grayCellTwo">
+                        <span>Määrättymäärä</span>
+                    </div>
+                    <div class="col-lg-2 grayCellThree">
+                        <span>Lääkettäsaamatta</span>
+                    </div>
+                    <div class="col-lg-3 grayCellFour">
+                        <span>Resepti voimassa saakka</span>
+                    </div>
+                </div>
+
+                <div class="row prescriptionRow">
+                    <div class="col-lg-2 yellowCell">
+                        <span>24.3.2015</span>
+                    </div>
+                    <div class="col-lg-3 grayCellOne">
+                        <span>Kestine LYO 20 mg tabletti, kylmäkuivattu</span>
+                    </div>
+                    <div class="col-lg-2 grayCellTwo">
+                        <span>1X100 fol</span>
+                    </div>
+                    <div class="col-lg-2 grayCellThree">
+                        <span>0</span>
+                    </div>
+                    <div class="col-lg-3 grayCellFour">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="row prescriptionRow">
+                    <div class="col-lg-2 yellowCell">
+                        <span>1.4.2015</span>
+                    </div>
+                    <div class="col-lg-3 grayCellOne">
+                        <span>BECLONASAL FORTE AQUA 100 mikrog/annosnenäsumute, suspensio</span>
+                    </div>
+                    <div class="col-lg-2 grayCellTwo">
+                        <span>2X200 annosta</span>
+                    </div>
+                    <div class="col-lg-2 grayCellThree">
+                        <span>200 annosta</span>
+                    </div>
+                    <div class="col-lg-3 grayCellFour">
+                        <span>1.4.2015</span>
+                    </div>
+                </div>
+
+                <div class="row prescriptionRow">
+                    <div class="col-lg-2 yellowCell">
+                        <span>1.4.2014</span>
+                    </div>
+                    <div class="col-lg-3 grayCellOne">
+                        <span>LOMUDAL 40 mg/ml silmätipat, liuos, kertaannospipetti</span>
+                    </div>
+                    <div class="col-lg-2 grayCellTwo">
+                        <span>3X60 x 0,35 ml</span>
+                    </div>
+                    <div class="col-lg-2 grayCellThree">
+                        <span>l 2X60X0,35 ML</span>
+                    </div>
+                    <div class="col-lg-3 grayCellFour">
+                        <span>1.4.2015</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
         </div><!--/row-->
     </div><!--/.col-xs-12.col-sm-9-->
+
 </div><!--/row-->
 
-<img src="assets/img/personal001.svg" class='personal001'/>
+<img src="assets/img/personal001.svg" class='personal001' addblurhover/>
 <img src="assets/img/personal003.svg" class='personal003' addblurhover/>
 <img src="assets/img/personal004.svg" class='personal004' addblurhover/>
-<img src="assets/img/personal005.svg" class='personal005'addblurhover/>
-
-
+<img src="assets/img/personal005.svg" class='personal005' addblurhover/>
 
